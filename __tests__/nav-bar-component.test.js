@@ -1,4 +1,4 @@
-import NavegationBar from "../dist/components/NavegationBar";
+import NavegationBar from "../dist/scripts/components/NavegationBar.js";
 
 describe("Given a navegation bar component", () => {
   describe("When it's intanciated", () => {

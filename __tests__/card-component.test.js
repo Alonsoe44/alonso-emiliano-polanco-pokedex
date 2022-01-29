@@ -1,4 +1,4 @@
-import Card from "../dist/components/Card.js";
+import Card from "../dist/scripts/components/Card.js";
 
 describe("Given a Card component", () => {
   describe("When it's intanciated", () => {
