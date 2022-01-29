@@ -1,4 +1,4 @@
-import Button from "../dist/components/Button.js";
+import Button from "../dist/scripts/components/Button.js";
 
 describe("Given a buttton component", () => {
   describe("When it's intanciated", () => {

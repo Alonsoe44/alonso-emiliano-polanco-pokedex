@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="shortcut icon"
+      href="static/pokeFavicon.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/4a193771ff.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
@@ -15,10 +24,30 @@
     <title>Pokedex</title>
   </head>
   <body>
-    <div class="pokemon-card">
-      <h4 class="pokemon-card__pokemon-name">Bulbasaur</h4>
-      <dl class="pokemon-card__pokemon-stats"></dl>
-      <img class="pokemon-card__pokemon-image" src="" atl="nothing" />
+    <div class="app-container">
+      <div class="pokemon-card">
+        <h4 class="pokemon-card__pokemon-name">Bulbasaur</h4>
+        <dl class="pokemon-card__pokemon-stats"></dl>
+        <img class="pokemon-card__pokemon-image" src="" atl="nothing" />
+      </div>
+      <nav class="navegation-bar">
+        <div class="option-container">
+          <a class="navegation-bar__icon"><i class="fas fa-home"></i></a>
+          <span class="navegation-bar__description">Pokepets</span>
+        </div>
+        <div class="option-container">
+          <a><i class="fas fa-globe"></i></a>
+          <span class="navegation-bar__description">World</span>
+        </div>
+        <div class="option-container">
+          <a><i class="fas fa-chevron-right"></i></a>
+          <span class="navegation-bar__description">Return</span>
+        </div>
+        <div class="option-container">
+          <a><i class="fas fa-chevron-right"></i></a>
+          <span class="navegation-bar__description">Next</span>
+        </div>
+      </nav>
     </div>
   </body>
 </html>

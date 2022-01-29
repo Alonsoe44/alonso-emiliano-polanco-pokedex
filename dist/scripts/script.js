@@ -1,4 +1,4 @@
-import Card from "../components/Card.js";
+import Card from "./components/Card.js";
 
 const emptyBox = document.querySelector(".pokemon-card__pokemon-image");
 const asyncPokemon = async () => {
@@ -10,6 +10,7 @@ const asyncPokemon = async () => {
   const pokePictureResponse = pokeInfo.sprites.other.dream_world.front_default;
 
   emptyBox.src = pokePictureResponse;
+  new Card(document.querySelector("body"), "bulbasaur", pokePictureResponse);
 };
 
 asyncPokemon();
