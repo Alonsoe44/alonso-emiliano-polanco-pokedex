@@ -1,3 +1,5 @@
+import Card from "../components/Card.js";
+
 const emptyBox = document.querySelector(".pokemon-card__pokemon-image");
 const asyncPokemon = async () => {
   const response = await fetch("https://pokeapi.co/api/v2/pokemon/");

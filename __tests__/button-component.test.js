@@ -14,9 +14,10 @@ describe("Given a buttton component", () => {
       test("Then it should render the text", () => {
         const container = document.createElement("div");
         const renderedText = "next";
+        const expectedText = "next";
         new Button(container, "", renderedText);
 
-        expect(container.textContent).toBe("next");
+        expect(container.textContent).toBe(expectedText);
       });
     });
 
