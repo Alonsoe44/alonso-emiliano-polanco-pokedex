@@ -1,0 +1,41 @@
+@use "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pokemon-card {
+  position: relative;
+  background-color: variables.$type-plant-color;
+  border-radius: 2rem;
+  padding: 1.3rem;
+  margin: 2rem;
+  height: 10rem;
+  overflow: hidden;
+  z-index: -2;
+  display: flex;
+}
+.pokemon-card::before {
+  background-color: red;
+  position: absolute;
+  z-index: 3;
+}
+
+.pokemon-card__pokemon-name {
+  font-size: 2.5rem;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  align-self: flex-end;
+}
+
+.pokemon-card__pokemon-image {
+  width: 16rem;
+  height: auto;
+  position: absolute;
+  top: -3rem;
+  left: -1rem;
+  z-index: -1;
+  filter: brightness(0.7);
+}
