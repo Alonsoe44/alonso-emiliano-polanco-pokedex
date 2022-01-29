@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --wacthAll --coverage",
+    "test": "jest --watchAll --coverage",
     "prepare": "husky install",
     "compile": "npx sass scss/main.scss dist/style.css",
     "compile-watch": "sass scss/main.scss dist/style.css --watch"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +25,14 @@
     "husky": "^7.0.0",
     "jest": "^27.4.7",
     "sass": "^1.49.0"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
   }
 }
