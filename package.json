@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --wacthAll --coverage",
     "prepare": "husky install",
-    "compile": "sass scss/main.scss dist/style.css",
+    "compile": "npx sass scss/main.scss dist/style.css",
     "compile-watch": "sass scss/main.scss dist/style.css --watch"
   },
   "keywords": [],
