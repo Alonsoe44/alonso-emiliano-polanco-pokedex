@@ -25,6 +25,7 @@ describe("Given a buttton component", () => {
       test("Then it should call a function", () => {
         const container = document.createElement("div");
         const action = jest.fn();
+
         const button = new Button(container, "", "", action);
         button.element.click();
 
