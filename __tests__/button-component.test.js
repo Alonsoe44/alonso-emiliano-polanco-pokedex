@@ -5,9 +5,9 @@ describe("Given a buttton component", () => {
     test("Then it should render itself", () => {
       const container = document.createElement("div");
 
-      new Button(container, "arrr");
+      new Button(container, "a", "div", " ", " ");
 
-      expect(container.querySelector("button")).not.toBeNull();
+      expect(container.querySelector("div")).not.toBeNull();
     });
 
     describe("When it gets 'next' as text", () => {
@@ -15,9 +15,9 @@ describe("Given a buttton component", () => {
         const container = document.createElement("div");
         const renderedText = "next";
         const expectedText = "next";
-        new Button(container, "", renderedText);
+        new Button(container, "", "div", renderedText);
 
-        expect(container.textContent).toBe(expectedText);
+        expect(container.textContent).toMatch(expectedText);
       });
     });
 
@@ -26,7 +26,7 @@ describe("Given a buttton component", () => {
         const container = document.createElement("div");
         const action = jest.fn();
 
-        const button = new Button(container, "", "", action);
+        const button = new Button(container, "", "div", "", "", action);
         button.element.click();
 
         expect(action).toHaveBeenCalled();
