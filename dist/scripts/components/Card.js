@@ -16,7 +16,8 @@ export default class Card extends Component {
   generateContent() {
     this.element.innerHTML = `<h4 class="pokemon-card__pokemon-name">${this.title}</h4>
       <dl class="pokemon-card__pokemon-stats"></dl>
-      <img class="pokemon-card__pokemon-image" src=${this.imageSrc} alt="${this.title} picture"/>`;
+      <img class="pokemon-card__pokemon-image" src=${this.imageSrc} alt="${this.title} picture"/>
+      <i class="fas fa-plus-circle add-button"></i>`;
   }
 
   addListeners() {

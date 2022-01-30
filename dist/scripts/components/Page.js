@@ -44,9 +44,9 @@ export default class Page extends Component {
         types: pokemonGroupData[index].types[0].type.name,
         moves: pokemonGroupData[index].moves[0].move.name,
       }));
-      pokemonGroupObjects.forEach(
-        (pokemon) => new Card(this.element, pokemon.name, pokemon.image)
-      );
+      pokemonGroupObjects.forEach((pokemon) => {
+        new Card(this.element, pokemon.name, pokemon.image);
+      });
     })();
   }
 
