@@ -17,11 +17,6 @@
   z-index: -2;
   display: flex;
 }
-.pokemon-card::before {
-  background-color: red;
-  position: absolute;
-  z-index: 3;
-}
 
 .pokemon-card__pokemon-name {
   font-size: 2.5rem;
@@ -58,5 +53,12 @@
   justify-content: center;
   span {
     font-family: "Roboto", sans-serif;
+    font-size: 0.7rem;
   }
+}
+
+.page-container {
+  position: static;
+  overflow-y: scroll;
+  height: calc(100vh - 5rem);
 }
