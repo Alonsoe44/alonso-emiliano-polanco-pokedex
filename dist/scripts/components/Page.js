@@ -4,9 +4,18 @@ import NavegationBar from "./NavegationBar.js";
 import Button from "./Button.js";
 
 export default class Page extends Component {
-  pageIndex;
+  offSet;
+  pokemonsPerPage;
   constructor(parentElement, className) {
     super(parentElement, className, "div");
+    this.offSet = 0;
+    this.pokemonsPerPage = 15;
+    this.renderPokemonPage(0);
+  }
+
+  renderPokemonPage(plusOrLess) {
+    this.offSet += plusOrLess;
+    this.element.innerHTML = "";
     this.asyncPokemonCardsCreation();
     this.createNavegationBar();
     this.createNavegationButtons();
@@ -15,7 +24,7 @@ export default class Page extends Component {
   asyncPokemonCardsCreation() {
     (async () => {
       const response = await fetch(
-        "https://pokeapi.co/api/v2/pokemon/?limit=15"
+        `https://pokeapi.co/api/v2/pokemon/?limit=${this.pokemonsPerPage}&offset=${this.offSet}`
       );
       const responseJson = await response.json();
       const pokemonGroup = responseJson.results;
@@ -69,8 +78,12 @@ export default class Page extends Component {
       "option-container",
       "div",
       "back",
-      "chevron-right",
-      () => {}
+      "chevron-left",
+      () => {
+        if (this.offSet > 0) {
+          this.renderPokemonPage(-this.pokemonsPerPage);
+        }
+      }
     );
     new Button(
       navegationBarDom,
@@ -78,7 +91,9 @@ export default class Page extends Component {
       "div",
       "Next",
       "chevron-right",
-      () => {}
+      () => {
+        this.renderPokemonPage(this.pokemonsPerPage);
+      }
     );
   }
 }
